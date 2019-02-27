@@ -1,1 +1,1 @@
-#servidor con aplicacion flask para consulta 
+#servidor con aplicacion
