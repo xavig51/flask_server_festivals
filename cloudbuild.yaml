@@ -1,4 +1,4 @@
-# This step clones the hello-cloudbuild-env repository
+# This step clones the flask-server-env repository
 - name: 'gcr.io/cloud-builders/gcloud'
   id: Clone env repository
   entrypoint: /bin/sh
@@ -31,6 +31,6 @@
     cd flask-server-env && \
     git add kubernetes.yaml && \
     git commit -m "Deploying image gcr.io/${PROJECT_ID}/flask-server:${SHORT_SHA}
-    Built from commit ${COMMIT_SHA} of repository
+    Built from commit ${COMMIT_SHA} of repository flask-server-app
     Author: $(git log --format='%an <%ae>' -n 1 HEAD)" && \
     git push origin candidate
