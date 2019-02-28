@@ -1,6 +1,6 @@
 
 from flask import Flask
-app = Flask('hello-cloud')
+app = Flask('hello-cloudbuild')
 
 @app.route('/')
 def hello():
