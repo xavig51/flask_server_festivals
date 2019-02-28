@@ -1,6 +1,6 @@
 
 from flask import Flask
-app = Flask('your festivals')
+app = Flask('hello-cloud')
 
 @app.route('/')
 def hello():
