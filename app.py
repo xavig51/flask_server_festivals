@@ -4,7 +4,6 @@ from flask import request
 import json
 from pymongo import MongoClient
 from flask_restplus import Namespace, Resource,fields,reqparse
-from application.festivales.festivalesRest import api
 from flask_cors import CORS, cross_origin
 
 app=Flask(__name__)
