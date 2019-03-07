@@ -6,4 +6,4 @@ RUN pip install -U flask-cors
 WORKDIR /app
 COPY ./application /app
 ENTRYPOINT ["python"]
-CMD ["/app/init.py"]
+CMD ["/app/application/init.py"]
