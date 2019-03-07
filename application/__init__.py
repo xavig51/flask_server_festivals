@@ -1,10 +1,7 @@
 from flask import Flask,Blueprint,url_for
 from flask_restplus import Api
 
-
-app=Flask(__name__)
-
-app = Flask(__name__)
+app = Flask("flask-server")
 blueprint = Blueprint('api', __name__, url_prefix='/application')
 api = Api(blueprint,
 	title='festivales... a way of life',
