@@ -16,7 +16,7 @@ api = Api(blueprint,
 	)
 app.register_blueprint(blueprint)
 
-api.add_namespace("festivales/0.1","informacion de festivales")
+#api.add_namespace("festivales/0.1","informacion de festivales")
 
 def normalizacion(cadena):
 	cadena=cadena.replace("\"","").replace("'","").replace(": ","\":\"").replace(", ","\",\"").replace("{","{\"") \
@@ -25,10 +25,11 @@ def normalizacion(cadena):
 
 #client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',username='javig13' \
 	#,password='Estudiantes15',connect=False)
-
+@api.route('/consulta')
 class consulta(Resource):
 	@cross_origin()
 	def get(self):
+		return "hello"
 		"""
 		salida="["
 		festivales = client['festivales'].spain
@@ -46,4 +47,6 @@ class consulta(Resource):
 		salida+="]"
 		return salida
 		"""
-api.add_resource(consulta,'/consulta',endpoint="consulta festivales españoles")
+		
+if __name__ == '__main__':
+    app.run(debug=True)
