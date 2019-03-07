@@ -6,9 +6,7 @@ from pymongo import MongoClient
 from flask_restplus import Namespace, Resource,fields,reqparse
 from flask_cors import CORS, cross_origin
 
-app=Flask(__name__)
-
-app = Flask(__name__)
+app = Flask("flask_server")
 blueprint = Blueprint('api', __name__, url_prefix='/application')
 api = Api(blueprint,
 	title='festivales... a way of life',
@@ -25,12 +23,13 @@ def normalizacion(cadena):
 				.replace("}","\"}")
 	return cadena.replace("http\":\"","http:").replace("https\":\"","https:")
 
-client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',username='javig13' \
-	,password='Estudiantes15',connect=False)
+#client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',username='javig13' \
+	#,password='Estudiantes15',connect=False)
 
 class consulta(Resource):
 	@cross_origin()
 	def get(self):
+		"""
 		salida="["
 		festivales = client['festivales'].spain
 		i=0
@@ -46,5 +45,5 @@ class consulta(Resource):
 
 		salida+="]"
 		return salida
-
+		"""
 api.add_resource(consulta,'/consulta',endpoint="consulta festivales españoles")
