@@ -17,6 +17,8 @@ client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',usernam
 class consulta(Resource):
 	@cross_origin()
 	def get(self):
+	print("hello")
+	"""
 		salida="["
 		festivales = client['festivales'].spain
 		i=0
@@ -32,3 +34,4 @@ class consulta(Resource):
 
 		salida+="]"
 		return salida
+	"""
