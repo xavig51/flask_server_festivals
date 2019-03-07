@@ -4,6 +4,6 @@ RUN pip install flask_restplus
 RUN pip install pymongo
 RUN pip install -U flask-cors
 WORKDIR /app
-COPY app.py /app/app.py
+COPY /applicaction/* /app
 ENTRYPOINT ["python"]
-CMD ["/app/app.py"]
+CMD ["/app/init.py"]
