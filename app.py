@@ -32,7 +32,7 @@ def normalizacion(cadena):
 class consulta(Resource):
 	@cross_origin()
 	def get(self):
-		return "hello"
+		return "hello world"
 		"""
 		salida="["
 		festivales = client['festivales'].spain
