@@ -23,15 +23,14 @@ def normalizacion(cadena):
 				.replace("}","\"}")
 	return cadena.replace("http\":\"","http:").replace("https\":\"","https:")
 
-#client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',username='javig13' \
-	#,password='Estudiantes15',connect=False)
+client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',username='consulter ' \
+	#,password='do5CKIyIyKNvE6BY',connect=False)
 	
 @ns1.route('/espana')
 class consulta(Resource):
 	@cross_origin()
 	def get(self):
-		return "hello world"
-		"""
+		#return "hello world"
 		salida="["
 		festivales = client['festivales'].spain
 		i=0
@@ -47,7 +46,7 @@ class consulta(Resource):
 
 		salida+="]"
 		return salida
-		"""
+		
 		
 api.add_namespace(ns1, path='/festivales')
 
