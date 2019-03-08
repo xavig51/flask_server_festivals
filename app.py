@@ -17,7 +17,7 @@ api = Api(blueprint,
 app.register_blueprint(blueprint)
 
 ns1 = Namespace('datos',description='servicios de consulta de datos')
-api.add_namespace(ns1, path='/datos')
+
 
 #api.add_namespace("festivales/0.1","informacion de festivales")
 
@@ -28,7 +28,7 @@ def normalizacion(cadena):
 
 #client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',username='javig13' \
 	#,password='Estudiantes15',connect=False)
-@api.route('/consulta')
+@ns1.route('/consulta')
 class consulta(Resource):
 	@cross_origin()
 	def get(self):
@@ -50,7 +50,8 @@ class consulta(Resource):
 		salida+="]"
 		return salida
 		"""
-		
+api.add_namespace(ns1, path='/datos')
+
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 8080)
 
