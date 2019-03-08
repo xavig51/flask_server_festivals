@@ -24,7 +24,7 @@ def normalizacion(cadena):
 	return cadena.replace("http\":\"","http:").replace("https\":\"","https:")
 
 client = MongoClient('mongodb+srv://cluster0-lhfgs.gcp.mongodb.net/test',username='consulter ' \
-	#,password='do5CKIyIyKNvE6BY',connect=False)
+	,password='do5CKIyIyKNvE6BY',connect=False)
 	
 @ns1.route('/espana')
 class consulta(Resource):
