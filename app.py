@@ -9,7 +9,7 @@ from flask_cors import CORS, cross_origin
 app = Flask("flask_server")
 blueprint = Blueprint('api', __name__, url_prefix='/application')
 api = Api(blueprint,
-	title='festivales... a way of life',
+	title='festivals... a way of life',
 	version='v0.1',
 	description='servidor api rest',
 	doc='/',
