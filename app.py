@@ -16,7 +16,8 @@ api = Api(blueprint,
 	)
 app.register_blueprint(blueprint)
 
-api.add_namespace(NameSpace('datos','servicios de consulta de datos'), path='/datos')
+ns1 = NameSpace('datos','servicios de consulta de datos')
+api.add_namespace(ns1, path='/datos')
 
 #api.add_namespace("festivales/0.1","informacion de festivales")
 
