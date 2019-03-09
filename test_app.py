@@ -1,11 +1,11 @@
 
 import unittest
-from app import hello
+from app import client
 
-class TestHelloApp(unittest.TestCase):
+class TestApp(unittest.TestCase):
 
-  def test_hello(self):
-    self.assertEqual(hello(), "primer despligue simple\n")
+  def test_connection(self):
+    self.assertTrue(client)
 
 if __name__ == '__main__':
   unittest.main()
